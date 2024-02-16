@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		403003672B7E52B80099229C /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403003662B7E52B80099229C /* LoginRequest.swift */; };
+		4030036C2B7E534E0099229C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030036B2B7E534E0099229C /* NetworkManager.swift */; };
+		403003732B7E64690099229C /* WelcomePageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403003722B7E64690099229C /* WelcomePageUITests.swift */; };
+		403003752B7E64BE0099229C /* WelcomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403003742B7E64BE0099229C /* WelcomePageView.swift */; };
+		403003792B7E65240099229C /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403003782B7E65240099229C /* AuthenticationServiceProtocol.swift */; };
+		4030037C2B7E65890099229C /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030037B2B7E65890099229C /* AuthenticationService.swift */; };
 		40343AEB2B7E3A5F00C90C1C /* AcebookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343AEA2B7E3A5F00C90C1C /* AcebookApp.swift */; };
 		40343AED2B7E3A5F00C90C1C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343AEC2B7E3A5F00C90C1C /* ContentView.swift */; };
 		40343AEF2B7E3A6100C90C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40343AEE2B7E3A6100C90C1C /* Assets.xcassets */; };
@@ -14,6 +20,15 @@
 		40343AFC2B7E3A6100C90C1C /* AcebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343AFB2B7E3A6100C90C1C /* AcebookTests.swift */; };
 		40343B062B7E3A6100C90C1C /* AcebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B052B7E3A6100C90C1C /* AcebookUITests.swift */; };
 		40343B082B7E3A6100C90C1C /* AcebookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B072B7E3A6100C90C1C /* AcebookUITestsLaunchTests.swift */; };
+		40343B152B7E3BD200C90C1C /* signUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B142B7E3BD200C90C1C /* signUpView.swift */; };
+		40343B172B7E3C2600C90C1C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B162B7E3C2600C90C1C /* LoginView.swift */; };
+		40343B192B7E3C4A00C90C1C /* PostFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B182B7E3C4A00C90C1C /* PostFeedView.swift */; };
+		40343B1B2B7E3C6900C90C1C /* ProfileSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B1A2B7E3C6900C90C1C /* ProfileSettingsView.swift */; };
+		40343B1D2B7E3C8400C90C1C /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B1C2B7E3C8400C90C1C /* UserProfileView.swift */; };
+		40343B212B7E3E7E00C90C1C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B202B7E3E7E00C90C1C /* User.swift */; };
+		40343B232B7E3E8E00C90C1C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B222B7E3E8E00C90C1C /* Post.swift */; };
+		40343B252B7E3EDA00C90C1C /* SignUpDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B242B7E3EDA00C90C1C /* SignUpDetails.swift */; };
+		40343B272B7E3EF900C90C1C /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B262B7E3EF900C90C1C /* LoginCredentials.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		403003662B7E52B80099229C /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		4030036B2B7E534E0099229C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		403003722B7E64690099229C /* WelcomePageUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomePageUITests.swift; path = "../../../swiftui-engineering-project-main/MobileAcebookUITests/WelcomePageUITests.swift"; sourceTree = "<group>"; };
+		403003742B7E64BE0099229C /* WelcomePageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomePageView.swift; path = "../../../../swiftui-engineering-project-main/MobileAcebook/WelcomePageView.swift"; sourceTree = "<group>"; };
+		403003782B7E65240099229C /* AuthenticationServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationServiceProtocol.swift; path = "../../../../swiftui-engineering-project-main/MobileAcebook/Protocols/AuthenticationServiceProtocol.swift"; sourceTree = "<group>"; };
+		4030037B2B7E65890099229C /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationService.swift; path = "../../../../swiftui-engineering-project-main/MobileAcebook/Services/AuthenticationService.swift"; sourceTree = "<group>"; };
 		40343AE72B7E3A5F00C90C1C /* Acebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Acebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40343AEA2B7E3A5F00C90C1C /* AcebookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcebookApp.swift; sourceTree = "<group>"; };
 		40343AEC2B7E3A5F00C90C1C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +65,15 @@
 		40343B012B7E3A6100C90C1C /* AcebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40343B052B7E3A6100C90C1C /* AcebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcebookUITests.swift; sourceTree = "<group>"; };
 		40343B072B7E3A6100C90C1C /* AcebookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcebookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		40343B142B7E3BD200C90C1C /* signUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpView.swift; sourceTree = "<group>"; };
+		40343B162B7E3C2600C90C1C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		40343B182B7E3C4A00C90C1C /* PostFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeedView.swift; sourceTree = "<group>"; };
+		40343B1A2B7E3C6900C90C1C /* ProfileSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsView.swift; sourceTree = "<group>"; };
+		40343B1C2B7E3C8400C90C1C /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		40343B202B7E3E7E00C90C1C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		40343B222B7E3E8E00C90C1C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		40343B242B7E3EDA00C90C1C /* SignUpDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetails.swift; sourceTree = "<group>"; };
+		40343B262B7E3EF900C90C1C /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +101,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		403003692B7E530F0099229C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4030036A2B7E53400099229C /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				4030036B2B7E534E0099229C /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		4030036F2B7E5CB00099229C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4030037B2B7E65890099229C /* AuthenticationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		403003702B7E5CC40099229C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		403003712B7E5CF00099229C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				403003782B7E65240099229C /* AuthenticationServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		40343ADE2B7E3A5F00C90C1C = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +162,23 @@
 		40343AE92B7E3A5F00C90C1C /* Acebook */ = {
 			isa = PBXGroup;
 			children = (
+				403003712B7E5CF00099229C /* Protocols */,
+				4030036F2B7E5CB00099229C /* Services */,
+				4030036A2B7E53400099229C /* NetworkManager */,
+				403003692B7E530F0099229C /* UI */,
 				40343AEA2B7E3A5F00C90C1C /* AcebookApp.swift */,
 				40343AEC2B7E3A5F00C90C1C /* ContentView.swift */,
+				40343B162B7E3C2600C90C1C /* LoginView.swift */,
+				40343B142B7E3BD200C90C1C /* signUpView.swift */,
+				40343B1A2B7E3C6900C90C1C /* ProfileSettingsView.swift */,
+				40343B1C2B7E3C8400C90C1C /* UserProfileView.swift */,
+				40343B182B7E3C4A00C90C1C /* PostFeedView.swift */,
+				40343B282B7E408400C90C1C /* models */,
+				40343B202B7E3E7E00C90C1C /* User.swift */,
+				40343B222B7E3E8E00C90C1C /* Post.swift */,
+				40343B242B7E3EDA00C90C1C /* SignUpDetails.swift */,
+				403003662B7E52B80099229C /* LoginRequest.swift */,
+				40343B262B7E3EF900C90C1C /* LoginCredentials.swift */,
 				40343AEE2B7E3A6100C90C1C /* Assets.xcassets */,
 				40343AF02B7E3A6100C90C1C /* Preview Content */,
 			);
@@ -105,6 +188,7 @@
 		40343AF02B7E3A6100C90C1C /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				403003742B7E64BE0099229C /* WelcomePageView.swift */,
 				40343AF12B7E3A6100C90C1C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -113,6 +197,7 @@
 		40343AFA2B7E3A6100C90C1C /* AcebookTests */ = {
 			isa = PBXGroup;
 			children = (
+				403003702B7E5CC40099229C /* Services */,
 				40343AFB2B7E3A6100C90C1C /* AcebookTests.swift */,
 			);
 			path = AcebookTests;
@@ -123,8 +208,16 @@
 			children = (
 				40343B052B7E3A6100C90C1C /* AcebookUITests.swift */,
 				40343B072B7E3A6100C90C1C /* AcebookUITestsLaunchTests.swift */,
+				403003722B7E64690099229C /* WelcomePageUITests.swift */,
 			);
 			path = AcebookUITests;
+			sourceTree = "<group>";
+		};
+		40343B282B7E408400C90C1C /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +350,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40343B1D2B7E3C8400C90C1C /* UserProfileView.swift in Sources */,
 				40343AED2B7E3A5F00C90C1C /* ContentView.swift in Sources */,
+				40343B252B7E3EDA00C90C1C /* SignUpDetails.swift in Sources */,
+				4030036C2B7E534E0099229C /* NetworkManager.swift in Sources */,
+				403003672B7E52B80099229C /* LoginRequest.swift in Sources */,
+				403003792B7E65240099229C /* AuthenticationServiceProtocol.swift in Sources */,
 				40343AEB2B7E3A5F00C90C1C /* AcebookApp.swift in Sources */,
+				40343B192B7E3C4A00C90C1C /* PostFeedView.swift in Sources */,
+				40343B212B7E3E7E00C90C1C /* User.swift in Sources */,
+				40343B1B2B7E3C6900C90C1C /* ProfileSettingsView.swift in Sources */,
+				40343B232B7E3E8E00C90C1C /* Post.swift in Sources */,
+				40343B172B7E3C2600C90C1C /* LoginView.swift in Sources */,
+				4030037C2B7E65890099229C /* AuthenticationService.swift in Sources */,
+				40343B272B7E3EF900C90C1C /* LoginCredentials.swift in Sources */,
+				40343B152B7E3BD200C90C1C /* signUpView.swift in Sources */,
+				403003752B7E64BE0099229C /* WelcomePageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40343B062B7E3A6100C90C1C /* AcebookUITests.swift in Sources */,
+				403003732B7E64690099229C /* WelcomePageUITests.swift in Sources */,
 				40343B082B7E3A6100C90C1C /* AcebookUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
