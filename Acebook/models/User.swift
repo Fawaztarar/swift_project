@@ -16,6 +16,6 @@ struct User: Identifiable, Codable {
     
     // Example for Preview purposes
     static var example: User {
-        User(id: "1", username: "FawazTarar", email: "fawaz@gmail.com", profilePictureURL: nil, bio: "Software Dev")
+        User(id: "1", username: "Fawaz Tarar", email: "fawaz@gmail.com", profilePictureURL: nil, bio: "Software Dev")
     }
 }

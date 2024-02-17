@@ -5,20 +5,43 @@
 //  Created by Fawaz Tarar on 16/02/2024.
 //
 
-import Foundation
 import SwiftUI
 
 struct PostDetailView: View {
-    @State var post: Post
+    @Binding var post: Post
+    var viewModel: PostViewModel
     @State private var newCommentText: String = ""
+    @State private var draftUsername: String = ""
+    @State private var draftContent: String = ""
+    @State private var showDeleteConfirmation: Bool = false
+    @State private var isLiked: Bool = false
+
+    // Inject the functions from the separate file
+       let addComment: () -> Void
+       let updateComment: (Comment) -> Void
+       let deleteComment: (Comment) -> Void
+
+       init(post: Binding<Post>, viewModel: PostViewModel, addComment: @escaping () -> Void, updateComment: @escaping (Comment) -> Void, deleteComment: @escaping (Comment) -> Void) {
+           self._post = post
+           self.viewModel = viewModel
+           _draftUsername = State(initialValue: post.wrappedValue.username)
+           _draftContent = State(initialValue: post.wrappedValue.content)
+           _isLiked = State(initialValue: post.wrappedValue.isLiked)
+           self.addComment = addComment
+           self.updateComment = updateComment
+           self.deleteComment = deleteComment
+       }
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 10) {
-                Text(post.username)
+                TextField("Username", text: $draftUsername)
                     .font(.headline)
-                Text(post.content)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                TextField("Content", text: $draftContent)
                     .font(.body)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
 
                 Text(post.createdAt, formatter: postDateFormatter)
                     .font(.caption)
@@ -26,11 +49,25 @@ struct PostDetailView: View {
 
                 Divider()
 
+                HStack {
+                    Button(action: {
+                        isLiked.toggle()
+                        post.isLiked = isLiked
+                    }) {
+                        Image(systemName: isLiked ? "heart.fill" : "heart")
+                            .foregroundColor(isLiked ? .red : .gray)
+                    }
+                    Text("\(post.likes) Likes")
+                        .font(.body)
+                        .foregroundColor(.gray)
+                }
+
                 Text("Comments")
                     .font(.headline)
 
                 ForEach(post.comments) { comment in
-                    CommentView(comment: comment)
+                    CommentView(comment: comment,
+                                onUpdate: updateComment, onDelete: deleteComment)
                 }
 
                 HStack {
@@ -38,7 +75,6 @@ struct PostDetailView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
 
                     Button("Post") {
-                        // Assuming CommentManager's addComment function is updated
                         addComment()
                     }
                 }
@@ -47,19 +83,41 @@ struct PostDetailView: View {
         }
         .navigationTitle("Post Details")
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(
+            trailing: HStack {
+                Button("Save") {
+                    post.username = draftUsername
+                    post.content = draftContent
+                }
+                Button("Delete") {
+                    showDeleteConfirmation = true
+                }
+            }
+        )
+        .alert(isPresented: $showDeleteConfirmation) {
+            Alert(
+                title: Text("Confirm Delete"),
+                message: Text("Are you sure you want to delete this post?"),
+                primaryButton: .destructive(Text("Delete")) {
+                    if let index = viewModel.posts.firstIndex(where: { $0.id == post.id }) {
+                        viewModel.deletePost(indexSet: IndexSet(integer: index))
+                    }
+                },
+                secondaryButton: .cancel()
+            )
+        }
     }
 
-    private func addComment() {
-        let comment = Comment(username: "currentUsername", content: newCommentText) // Replace with actual user data
-        post.comments.append(comment)
-        newCommentText = ""  // Reset the input field
-    }
-}
+    
+            }
+        
+
 
 struct PostDetailView_Previews: PreviewProvider {
     static var previews: some View {
+        let viewModel = PostViewModel()
         NavigationView {
-            PostDetailView(post: Post.example1)
+            PostDetailView(post: .constant(Post.example1), viewModel: viewModel, addComment: {}, updateComment: {_ in}, deleteComment: {_ in})
         }
     }
 }

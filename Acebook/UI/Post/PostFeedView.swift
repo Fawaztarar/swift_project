@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct PostFeedView: View {
-    @State private var posts: [Post] = [
+    @StateObject var viewModel = PostViewModel()
+    @State private var staticPosts: [Post] = [
         Post.example1,
         Post.example2,
         Post.example3,
@@ -16,20 +17,61 @@ struct PostFeedView: View {
         Post.example5,
         Post.example6
     ]
+    @State private var useStaticData = true
 
     var body: some View {
         NavigationView {
-            List(posts) { post in
-                NavigationLink(destination: PostDetailView(post: post)) {
-                    VStack(alignment: .leading) {
-                        Text(post.username)
-                            .font(.headline)
-                        Text(post.content)
-                            .font(.body)
+            List {
+                if useStaticData {
+                    ForEach(staticPosts.indices, id: \.self) { index in
+                        NavigationLink(destination: PostDetailView(post: $staticPosts[index], viewModel: viewModel, addComment: {}, updateComment: {_ in}, deleteComment: {_ in})) {
+                            // Your content here for staticPosts
+                            Text(staticPosts[index].username)
+                        }
                     }
+                } else {
+                    ForEach(viewModel.posts.indices, id: \.self) { index in
+                        NavigationLink(destination: PostDetailView(post: $viewModel.posts[index], viewModel: viewModel, addComment: {}, updateComment: {_ in}, deleteComment: {_ in})) {
+                            VStack(alignment: .leading) {
+                                Text(viewModel.posts[index].username).font(.headline)
+                                Text(viewModel.posts[index].content).font(.body)
+                            }
+                        }
+                    }
+                    .onDelete(perform: deletePost)
                 }
             }
             .navigationTitle("Feed")
+            .navigationBarItems(
+                leading: Button("Toggle Data Source") {
+                    useStaticData.toggle()
+                },
+                trailing: Button(action: addNewPost) {
+                    Image(systemName: "plus")
+                }
+            )
+            .onAppear {
+                if !useStaticData {
+                    viewModel.loadPosts()
+                }
+            }
+        }
+    }
+
+    func addNewPost() {
+        if useStaticData {
+            let newPost = Post(username: "NewUser", content: "New Content", createdAt: Date())
+            staticPosts.append(newPost)
+        } else {
+            viewModel.addPost(username: "NewUser", content: "New Content", createdAt: Date())
+        }
+    }
+
+    func deletePost(at offsets: IndexSet) {
+        if useStaticData {
+            staticPosts.remove(atOffsets: offsets)
+        } else {
+            viewModel.deletePost(indexSet: offsets)
         }
     }
 }

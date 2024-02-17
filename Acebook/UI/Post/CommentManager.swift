@@ -7,16 +7,23 @@
 
 import Foundation
 
-import Foundation
+import SwiftUI
+fileprivate var newCommentText: String = ""
 
-class CommentManager {
-    static let shared = CommentManager()
-    
-    private init() {}
-    
-    func addComment(to post: inout Post, content: String, username: String = "currentUsername") {
-        // This is a simplified example. In a real app, you'd likely make an API call to add the comment.
-        let newComment = Comment(username: username, content: content)
-        post.comments.append(newComment)
-    }
-}
+//extension PostDetailView {
+//    func addComment() {
+//        let comment = Comment(username: "Username", content: newCommentText) // Replace "Username" with actual user data
+//        post.comments.append(comment)
+//        newCommentText = ""
+//    }
+//
+//    func updateComment(_ updatedComment: Comment) {
+//        if let index = post.comments.firstIndex(where: { $0.id == updatedComment.id }) {
+//            post.comments[index] = updatedComment
+//        }
+//    }
+//
+//    func deleteComment(_ commentToDelete: Comment) {
+//        post.comments.removeAll { $0.id == commentToDelete.id }
+//    }
+//}

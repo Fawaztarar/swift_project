@@ -7,15 +7,23 @@
 
 import Foundation
 
-struct Post: Identifiable {
-    let id: UUID = UUID() // Provides a unique identifier
-    var username: String  // Add this line
+struct Post: Identifiable, Equatable {
+    let id: UUID
+    var username: String
     var content: String
     var createdAt: Date
     var comments: [Comment] = []
-    
-    
-    
+    var likes: Int = 0  // Provide default value for likes
+    var isLiked: Bool = false  // Provide default value for isLiked
+
+    init(id: UUID = UUID(), username: String, content: String, createdAt: Date = Date(), likes: Int = 0, isLiked: Bool = false) {
+        self.id = id
+        self.username = username
+        self.content = content
+        self.createdAt = createdAt
+        self.likes = likes
+        self.isLiked = isLiked
+    }
     
     
     // Example Posts for Preview

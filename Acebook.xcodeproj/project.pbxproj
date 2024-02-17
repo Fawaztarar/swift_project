@@ -18,6 +18,7 @@
 		403003832B7FA2CC0099229C /* CommentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403003822B7FA2CC0099229C /* CommentManager.swift */; };
 		403003852B7FA3980099229C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403003842B7FA3980099229C /* Comment.swift */; };
 		403003872B7FA7EC0099229C /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403003862B7FA7EC0099229C /* PostDetailView.swift */; };
+		4030038B2B81101B0099229C /* PostViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030038A2B81101B0099229C /* PostViewModel .swift */; };
 		40343AEB2B7E3A5F00C90C1C /* AcebookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343AEA2B7E3A5F00C90C1C /* AcebookApp.swift */; };
 		40343AED2B7E3A5F00C90C1C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343AEC2B7E3A5F00C90C1C /* ContentView.swift */; };
 		40343AEF2B7E3A6100C90C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40343AEE2B7E3A6100C90C1C /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		40343B232B7E3E8E00C90C1C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B222B7E3E8E00C90C1C /* Post.swift */; };
 		40343B252B7E3EDA00C90C1C /* SignUpDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B242B7E3EDA00C90C1C /* SignUpDetails.swift */; };
 		40343B272B7E3EF900C90C1C /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B262B7E3EF900C90C1C /* LoginCredentials.swift */; };
+		40CE3B742B814FB3005CBAF0 /* CommentFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CE3B732B814FB3005CBAF0 /* CommentFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 		403003822B7FA2CC0099229C /* CommentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentManager.swift; sourceTree = "<group>"; };
 		403003842B7FA3980099229C /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		403003862B7FA7EC0099229C /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
+		4030038A2B81101B0099229C /* PostViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostViewModel .swift"; sourceTree = "<group>"; };
 		40343AE72B7E3A5F00C90C1C /* Acebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Acebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40343AEA2B7E3A5F00C90C1C /* AcebookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcebookApp.swift; sourceTree = "<group>"; };
 		40343AEC2B7E3A5F00C90C1C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 		40343B222B7E3E8E00C90C1C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		40343B242B7E3EDA00C90C1C /* SignUpDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetails.swift; sourceTree = "<group>"; };
 		40343B262B7E3EF900C90C1C /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
+		40CE3B732B814FB3005CBAF0 /* CommentFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,9 +159,11 @@
 			isa = PBXGroup;
 			children = (
 				40343B182B7E3C4A00C90C1C /* PostFeedView.swift */,
-				403003862B7FA7EC0099229C /* PostDetailView.swift */,
+				4030038A2B81101B0099229C /* PostViewModel .swift */,
 				403003822B7FA2CC0099229C /* CommentManager.swift */,
 				403003802B7FA01D0099229C /* CommentView.swift */,
+				40CE3B732B814FB3005CBAF0 /* CommentFunctions.swift */,
+				403003862B7FA7EC0099229C /* PostDetailView.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -196,10 +202,6 @@
 				40343B1A2B7E3C6900C90C1C /* ProfileSettingsView.swift */,
 				40343B1C2B7E3C8400C90C1C /* UserProfileView.swift */,
 				40343B282B7E408400C90C1C /* models */,
-				40343B202B7E3E7E00C90C1C /* User.swift */,
-				40343B222B7E3E8E00C90C1C /* Post.swift */,
-				40343B242B7E3EDA00C90C1C /* SignUpDetails.swift */,
-				403003662B7E52B80099229C /* LoginRequest.swift */,
 				40343B262B7E3EF900C90C1C /* LoginCredentials.swift */,
 				40343AEE2B7E3A6100C90C1C /* Assets.xcassets */,
 				40343AF02B7E3A6100C90C1C /* Preview Content */,
@@ -239,6 +241,10 @@
 			isa = PBXGroup;
 			children = (
 				403003842B7FA3980099229C /* Comment.swift */,
+				40343B202B7E3E7E00C90C1C /* User.swift */,
+				40343B222B7E3E8E00C90C1C /* Post.swift */,
+				40343B242B7E3EDA00C90C1C /* SignUpDetails.swift */,
+				403003662B7E52B80099229C /* LoginRequest.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -374,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				403003812B7FA01D0099229C /* CommentView.swift in Sources */,
+				4030038B2B81101B0099229C /* PostViewModel .swift in Sources */,
 				40343B1D2B7E3C8400C90C1C /* UserProfileView.swift in Sources */,
 				403003832B7FA2CC0099229C /* CommentManager.swift in Sources */,
 				40343AED2B7E3A5F00C90C1C /* ContentView.swift in Sources */,
@@ -389,6 +396,7 @@
 				40343B172B7E3C2600C90C1C /* LoginView.swift in Sources */,
 				4030037C2B7E65890099229C /* AuthenticationService.swift in Sources */,
 				403003852B7FA3980099229C /* Comment.swift in Sources */,
+				40CE3B742B814FB3005CBAF0 /* CommentFunctions.swift in Sources */,
 				4030037E2B7F9DFC0099229C /* DateUtils.swift in Sources */,
 				40343B272B7E3EF900C90C1C /* LoginCredentials.swift in Sources */,
 				403003872B7FA7EC0099229C /* PostDetailView.swift in Sources */,
