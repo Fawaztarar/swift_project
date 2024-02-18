@@ -26,14 +26,18 @@ struct PostFeedView: View {
             List {
                 if useStaticData {
                     ForEach(staticPosts.indices, id: \.self) { index in
-                        NavigationLink(destination: PostDetailView(post: $staticPosts[index], viewModel: viewModel)) {
-                            PostCardView(post: staticPosts[index], viewModel: viewModel) // Pass viewModel here
+                NavigationLink(destination: PostDetailView(post: $staticPosts[index], viewModel: viewModel)) {
+                    Spacer()
+                    PostCardView(post: staticPosts[index], viewModel: viewModel)
+                    Spacer()
                         }
                     }
                 } else {
                     ForEach(viewModel.posts.indices, id: \.self) { index in
                         NavigationLink(destination: PostDetailView(post: $viewModel.posts[index], viewModel: viewModel)) {
-                            PostCardView(post: viewModel.posts[index], viewModel: viewModel) // Pass viewModel here
+                            Spacer()
+                            PostCardView(post: viewModel.posts[index], viewModel: viewModel)
+                            Spacer()
                         }
                     }
                 
@@ -60,12 +64,14 @@ struct PostFeedView: View {
 
     func addNewPost() {
         if useStaticData {
-            let newPost = Post(username: "NewUser", content: "New Content", createdAt: Date())
+            // Provide an actual profile picture value (e.g., a URL or filename)
+            let newPost = Post(username: "NewUser", content: "New Content", createdAt: Date(), profilePicture: "default_profile_picture")
             staticPosts.append(newPost)
         } else {
             viewModel.addPost(username: "NewUser", content: "New Content", createdAt: Date())
         }
     }
+
 
     func deletePost(at offsets: IndexSet) {
         if useStaticData {

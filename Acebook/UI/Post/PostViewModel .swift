@@ -17,9 +17,10 @@ class PostViewModel: ObservableObject {
         }
 
     // Add a new post
-    func addPost(username: String,content: String, createdAt: Date = Date()) {
-        let newPost = Post( username: username, content: content, createdAt: createdAt)
-        posts.append(newPost)        // Include backend logic here if necessary
+    func addPost(username: String, content: String, createdAt: Date = Date(), profilePicture: String = "default_profile_picture") {
+        let newPost = Post(username: username, content: content, createdAt: createdAt, profilePicture: profilePicture)
+        posts.append(newPost)
+        // Include backend logic here if necessary
     }
 
     // Edit an existing post
