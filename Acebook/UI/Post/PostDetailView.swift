@@ -16,21 +16,13 @@ struct PostDetailView: View {
     @State private var showDeleteConfirmation: Bool = false
     @State private var isLiked: Bool = false
 
-    // Inject the functions from the separate file
-       let addComment: () -> Void
-       let updateComment: (Comment) -> Void
-       let deleteComment: (Comment) -> Void
-
-       init(post: Binding<Post>, viewModel: PostViewModel, addComment: @escaping () -> Void, updateComment: @escaping (Comment) -> Void, deleteComment: @escaping (Comment) -> Void) {
-           self._post = post
-           self.viewModel = viewModel
-           _draftUsername = State(initialValue: post.wrappedValue.username)
-           _draftContent = State(initialValue: post.wrappedValue.content)
-           _isLiked = State(initialValue: post.wrappedValue.isLiked)
-           self.addComment = addComment
-           self.updateComment = updateComment
-           self.deleteComment = deleteComment
-       }
+    init(post: Binding<Post>, viewModel: PostViewModel) {
+        self._post = post
+        self.viewModel = viewModel
+        _draftUsername = State(initialValue: post.wrappedValue.username)
+        _draftContent = State(initialValue: post.wrappedValue.content)
+        _isLiked = State(initialValue: post.wrappedValue.isLiked)
+    }
 
     var body: some View {
         ScrollView {
@@ -51,8 +43,12 @@ struct PostDetailView: View {
 
                 HStack {
                     Button(action: {
-                        isLiked.toggle()
-                        post.isLiked = isLiked
+                    post.isLiked.toggle()
+                    if post.isLiked {
+                    post.likes += 1
+                } else {
+                    post.likes -= 1
+                        }
                     }) {
                         Image(systemName: isLiked ? "heart.fill" : "heart")
                             .foregroundColor(isLiked ? .red : .gray)
@@ -67,7 +63,12 @@ struct PostDetailView: View {
 
                 ForEach(post.comments) { comment in
                     CommentView(comment: comment,
-                                onUpdate: updateComment, onDelete: deleteComment)
+                                onUpdate: {
+                                    updateComment(post: &post, updatedComment: $0)
+                                },
+                                onDelete: {
+                                    deleteComment(post: &post, commentToDelete: $0)
+                                })
                 }
 
                 HStack {
@@ -75,7 +76,10 @@ struct PostDetailView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
 
                     Button("Post") {
-                        addComment()
+                        addComment(post: &post, newCommentText: newCommentText, draftUsername: draftUsername)
+                        // Reset text fields after adding comment
+                        newCommentText = ""
+                        draftUsername = ""
                     }
                 }
             }
@@ -88,6 +92,7 @@ struct PostDetailView: View {
                 Button("Save") {
                     post.username = draftUsername
                     post.content = draftContent
+                    // Save changes
                 }
                 Button("Delete") {
                     showDeleteConfirmation = true
@@ -107,17 +112,15 @@ struct PostDetailView: View {
             )
         }
     }
-
-    
-            }
-        
+}
 
 
 struct PostDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = PostViewModel()
         NavigationView {
-            PostDetailView(post: .constant(Post.example1), viewModel: viewModel, addComment: {}, updateComment: {_ in}, deleteComment: {_ in})
+            PostDetailView(post: .constant(Post.example6), viewModel: viewModel)
         }
     }
 }
+

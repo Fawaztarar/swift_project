@@ -24,14 +24,16 @@ struct PostFeedView: View {
             List {
                 if useStaticData {
                     ForEach(staticPosts.indices, id: \.self) { index in
-                        NavigationLink(destination: PostDetailView(post: $staticPosts[index], viewModel: viewModel, addComment: {}, updateComment: {_ in}, deleteComment: {_ in})) {
+                        NavigationLink(destination: PostDetailView(post: $staticPosts[index], viewModel: viewModel)) {
+                            // Your content here for staticPosts
+                            Text(staticPosts[index].username)
                             // Your content here for staticPosts
                             Text(staticPosts[index].username)
                         }
                     }
                 } else {
                     ForEach(viewModel.posts.indices, id: \.self) { index in
-                        NavigationLink(destination: PostDetailView(post: $viewModel.posts[index], viewModel: viewModel, addComment: {}, updateComment: {_ in}, deleteComment: {_ in})) {
+                        NavigationLink(destination: PostDetailView(post: $viewModel.posts[index], viewModel: viewModel)) {
                             VStack(alignment: .leading) {
                                 Text(viewModel.posts[index].username).font(.headline)
                                 Text(viewModel.posts[index].content).font(.body)
