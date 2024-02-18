@@ -34,6 +34,7 @@
 		40343B232B7E3E8E00C90C1C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B222B7E3E8E00C90C1C /* Post.swift */; };
 		40343B252B7E3EDA00C90C1C /* SignUpDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B242B7E3EDA00C90C1C /* SignUpDetails.swift */; };
 		40343B272B7E3EF900C90C1C /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B262B7E3EF900C90C1C /* LoginCredentials.swift */; };
+		404E974D2B818D03007738DB /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E974C2B818D03007738DB /* PostCardView.swift */; };
 		40CE3B742B814FB3005CBAF0 /* CommentFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CE3B732B814FB3005CBAF0 /* CommentFunctions.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		40343B222B7E3E8E00C90C1C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		40343B242B7E3EDA00C90C1C /* SignUpDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetails.swift; sourceTree = "<group>"; };
 		40343B262B7E3EF900C90C1C /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
+		404E974C2B818D03007738DB /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
 		40CE3B732B814FB3005CBAF0 /* CommentFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				40343B182B7E3C4A00C90C1C /* PostFeedView.swift */,
+				404E974C2B818D03007738DB /* PostCardView.swift */,
 				4030038A2B81101B0099229C /* PostViewModel .swift */,
 				403003802B7FA01D0099229C /* CommentView.swift */,
 				40CE3B732B814FB3005CBAF0 /* CommentFunctions.swift */,
@@ -385,6 +388,7 @@
 				403003672B7E52B80099229C /* LoginRequest.swift in Sources */,
 				403003792B7E65240099229C /* AuthenticationServiceProtocol.swift in Sources */,
 				40343AEB2B7E3A5F00C90C1C /* AcebookApp.swift in Sources */,
+				404E974D2B818D03007738DB /* PostCardView.swift in Sources */,
 				40343B192B7E3C4A00C90C1C /* PostFeedView.swift in Sources */,
 				40343B212B7E3E7E00C90C1C /* User.swift in Sources */,
 				40343B1B2B7E3C6900C90C1C /* ProfileSettingsView.swift in Sources */,

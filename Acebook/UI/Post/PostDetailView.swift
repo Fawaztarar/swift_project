@@ -43,11 +43,11 @@ struct PostDetailView: View {
 
                 HStack {
                     Button(action: {
-                    post.isLiked.toggle()
-                    if post.isLiked {
-                    post.likes += 1
-                } else {
-                    post.likes -= 1
+                        post.isLiked.toggle()
+                        if post.isLiked {
+                            post.likes += 1
+                        } else {
+                            post.likes -= 1
                         }
                     }) {
                         Image(systemName: isLiked ? "heart.fill" : "heart")
@@ -61,13 +61,13 @@ struct PostDetailView: View {
                 Text("Comments")
                     .font(.headline)
 
-                ForEach(post.comments) { comment in
-                    CommentView(comment: comment,
-                                onUpdate: {
-                                    updateComment(post: &post, updatedComment: $0)
+                ForEach(post.comments.indices, id: \.self) { index in
+                    CommentView(comment: post.comments[index],
+                                onUpdate: { updatedComment in
+                                    updateComment(post: &post, updatedComment: updatedComment)
                                 },
-                                onDelete: {
-                                    deleteComment(post: &post, commentToDelete: $0)
+                                onDelete: { commentToDelete in
+                                    deleteComment(post: &post, commentToDelete: commentToDelete)
                                 })
                 }
 
@@ -123,4 +123,3 @@ struct PostDetailView_Previews: PreviewProvider {
         }
     }
 }
-

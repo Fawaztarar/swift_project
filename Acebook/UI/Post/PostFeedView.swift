@@ -5,6 +5,8 @@
 //  Created by Fawaz Tarar on 15/02/2024.
 //
 
+
+
 import SwiftUI
 
 struct PostFeedView: View {
@@ -25,21 +27,17 @@ struct PostFeedView: View {
                 if useStaticData {
                     ForEach(staticPosts.indices, id: \.self) { index in
                         NavigationLink(destination: PostDetailView(post: $staticPosts[index], viewModel: viewModel)) {
-                            // Your content here for staticPosts
-                            Text(staticPosts[index].username)
-                            // Your content here for staticPosts
-                            Text(staticPosts[index].username)
+                            PostCardView(post: staticPosts[index], viewModel: viewModel) // Pass viewModel here
                         }
                     }
                 } else {
                     ForEach(viewModel.posts.indices, id: \.self) { index in
                         NavigationLink(destination: PostDetailView(post: $viewModel.posts[index], viewModel: viewModel)) {
-                            VStack(alignment: .leading) {
-                                Text(viewModel.posts[index].username).font(.headline)
-                                Text(viewModel.posts[index].content).font(.body)
-                            }
+                            PostCardView(post: viewModel.posts[index], viewModel: viewModel) // Pass viewModel here
                         }
                     }
+                
+
                     .onDelete(perform: deletePost)
                 }
             }
