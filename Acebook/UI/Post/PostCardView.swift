@@ -6,9 +6,17 @@
 //
 
 import Foundation
+//
+//  PostCardView.swift
+//  Acebook
+//
+//  Created by Fawaz Tarar on 18/02/2024.
+//
+
 import SwiftUI
 
 struct PostCardView: View {
+    
     let post: Post
     let viewModel: PostViewModel
     
@@ -18,31 +26,33 @@ struct PostCardView: View {
     }
     
     var body: some View {
-        HStack(spacing: 10) {
-            Image(post.profilePicture) // Assuming the profile picture is stored as an image name
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 50, height: 50)
-                .clipShape(Circle())
-            VStack(alignment: .leading, spacing: 10) {
-                Text(post.username)
-                    .font(.headline)
-                
-                Text(post.content)
-                    .font(.body)
-                
-                Text(post.createdAt, formatter: postDateFormatter)
-                    .font(.caption)
-                    .foregroundColor(.gray)
+        
+            HStack(spacing: 10) {
+                Image(post.profilePicture) // Assuming the profile picture is stored as an image name
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 50, height: 50)
+                    .clipShape(Circle())
+                VStack(alignment: .leading, spacing: 10) {
+                    Text(post.username)
+                        .font(.headline)
+                    
+                    Text(post.content)
+                        .font(.body)
+                    
+                    Text(post.createdAt, formatter: postDateFormatter)
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                }
+                .padding()
+                .background(Color.white)
+                .cornerRadius(10)
+                .shadow(radius: 5)
+                .padding(.horizontal)
             }
-            .padding()
-            .background(Color.white)
-            .cornerRadius(10)
-            .shadow(radius: 5)
-            .padding(.horizontal)
         }
     }
-}
+
 
 struct PostCardView_Previews: PreviewProvider {
     static var previews: some View {

@@ -16,15 +16,17 @@ struct Post: Identifiable, Equatable {
     var likes: Int = 0
     var isLiked: Bool = false
     let profilePicture: String // Add profile picture property
+    var imageURL: String?
 
-    init(id: UUID = UUID(), username: String, content: String, createdAt: Date = Date(), likes: Int = 0, isLiked: Bool = false, profilePicture: String) {
+    init(id: UUID = UUID(), username: String, content: String, createdAt: Date = Date(), likes: Int = 0, isLiked: Bool = false, profilePicture: String, imageURL: String? = nil) {
         self.id = id
         self.username = username
         self.content = content
         self.createdAt = createdAt
         self.likes = likes
         self.isLiked = isLiked
-        self.profilePicture = profilePicture // Initialize profile picture property
+        self.profilePicture = profilePicture
+        self.imageURL = imageURL
     }
 
     // Example Posts for Preview

@@ -33,18 +33,21 @@ struct CommentView: View {
             }
             Spacer()
             Button(action: {
-                onUpdate(Comment(id: comment.id, username: comment.username, content: comment.content, isLiked: !comment.isLiked))
+                var updatedComment = comment
+                updatedComment.isLiked.toggle()
+                onUpdate(updatedComment)
             }) {
                 Image(systemName: comment.isLiked ? "heart.fill" : "heart")
                     .foregroundColor(comment.isLiked ? .red : .gray)
             }
             Text("\(comment.likes) Likes") // Display the number of likes
-                            .font(.body)
-                            .foregroundColor(.gray)
+                .font(.body)
+                .foregroundColor(.gray)
             if isEditing {
                 Button("Save") {
                     isEditing = false
-                    onUpdate(Comment(id: comment.id, username: comment.username, content: editedContent, isLiked: comment.isLiked))
+                    let updatedComment = Comment(id: comment.id, username: comment.username, content: editedContent, isLiked: comment.isLiked)
+                    onUpdate(updatedComment)
                 }
             } else {
                 Button("Edit") {
