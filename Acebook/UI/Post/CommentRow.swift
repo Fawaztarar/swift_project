@@ -39,3 +39,12 @@ struct CommentRow: View {
         .padding(.horizontal)
     }
 }
+
+//struct CommentRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        // Example comment for preview
+//        let exampleComment = Comment(id: UUID(), username: "John", content: "This is a sample comment.")
+//        
+//        return CommentRow(comment: exampleComment)
+//    }
+//}

@@ -90,7 +90,24 @@ struct PostDetailView: View {
 struct PostDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = PostViewModel()
-        let examplePost = Post(id: UUID(), username: "John Doe", content: "This is a sample post", createdAt: Date(), profilePicture: "profile4.png")
+        
+        // Manually create an example post with comments for preview
+        var examplePost = Post(id: UUID(),
+                               username: "John Doe",
+                               content: "This is a sample post",
+                               createdAt: Date(),
+                               profilePicture: "profile4.png")
+        
+        // Manually add comments to the example post
+        let comment1 = Comment(id: UUID(), username: "User1", content: "Great post!")
+        let comment2 = Comment(id: UUID(), username: "User2", content: "Keep up the good work!")
+        examplePost.comments.append(comment1)
+        examplePost.comments.append(comment2)
+        
+        // Add a new comment
+        let newComment = Comment(id: UUID(), username: "NewUser", content: "This is a new comment!")
+        examplePost.comments.append(newComment)
+        
         return NavigationView {
             PostDetailView(post: .constant(examplePost), viewModel: viewModel)
         }
