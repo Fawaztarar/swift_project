@@ -59,23 +59,24 @@ struct LoginView: View {
         VStack {
             Spacer()
             
-            Image("xlogo.png") // Your Facebook logo image asset
+            Image("xlogo") // Your Facebook logo image asset
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 60)
+            Spacer()
             
-            Image("profile4.png") // Your profile picture image asset
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 150, height: 150)
-                .clipShape(Circle())
-                .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                .shadow(radius: 10)
-            
-            Text("Tarar Fawaz") // Dynamic user name
-                .font(.title)
-                .fontWeight(.semibold)
-                .padding(.top, 10)
+//            Image("profile4") // Your profile picture image asset
+//                .resizable()
+//                .aspectRatio(contentMode: .fill)
+//                .frame(width: 150, height: 150)
+//                .clipShape(Circle())
+//                .overlay(Circle().stroke(Color.white, lineWidth: 4))
+//                .shadow(radius: 10)
+//            
+//            Text("Tarar Fawaz") // Dynamic user name
+//                .font(.title)
+//                .fontWeight(.semibold)
+//                .padding(.top, 10)
             
             VStack {
                 TextField("Email", text: $email)
@@ -103,7 +104,7 @@ struct LoginView: View {
                 }
             }
             
-            Button("Log into another account") {
+            Button("Forget password?") {
                 // Handle log into another account action
             }
             .padding()
@@ -117,6 +118,7 @@ struct LoginView: View {
                     .background(Color.blue.opacity(0.2))
                     .cornerRadius(10)
                     .padding(.horizontal, 50)
+                
             }
             
             Spacer()

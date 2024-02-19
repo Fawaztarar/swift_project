@@ -38,6 +38,8 @@
 		404E97502B81C240007738DB /* CommentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E974F2B81C240007738DB /* CommentRow.swift */; };
 		404E97522B82BFBD007738DB /* FacebookTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E97512B82BFBD007738DB /* FacebookTopBarView.swift */; };
 		404E97542B82C1A0007738DB /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E97532B82C1A0007738DB /* CreatePostView.swift */; };
+		404E97562B82E163007738DB /* FacebookPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E97552B82E163007738DB /* FacebookPostView.swift */; };
+		404E975A2B82EB68007738DB /* UserProfileView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E97592B82EB68007738DB /* UserProfileView2.swift */; };
 		40CE3B742B814FB3005CBAF0 /* CommentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CE3B732B814FB3005CBAF0 /* CommentManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,8 @@
 		404E974F2B81C240007738DB /* CommentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRow.swift; sourceTree = "<group>"; };
 		404E97512B82BFBD007738DB /* FacebookTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookTopBarView.swift; sourceTree = "<group>"; };
 		404E97532B82C1A0007738DB /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
+		404E97552B82E163007738DB /* FacebookPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookPostView.swift; sourceTree = "<group>"; };
+		404E97592B82EB68007738DB /* UserProfileView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView2.swift; sourceTree = "<group>"; };
 		40CE3B732B814FB3005CBAF0 /* CommentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,7 +170,9 @@
 			children = (
 				40343B182B7E3C4A00C90C1C /* PostFeedView.swift */,
 				404E97532B82C1A0007738DB /* CreatePostView.swift */,
+				404E97592B82EB68007738DB /* UserProfileView2.swift */,
 				404E97512B82BFBD007738DB /* FacebookTopBarView.swift */,
+				404E97552B82E163007738DB /* FacebookPostView.swift */,
 				404E974C2B818D03007738DB /* PostCardView.swift */,
 				404E974F2B81C240007738DB /* CommentRow.swift */,
 				4030038A2B81101B0099229C /* PostViewModel .swift */,
@@ -392,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				403003812B7FA01D0099229C /* CommentView.swift in Sources */,
+				404E97562B82E163007738DB /* FacebookPostView.swift in Sources */,
 				4030038B2B81101B0099229C /* PostViewModel .swift in Sources */,
 				404E97542B82C1A0007738DB /* CreatePostView.swift in Sources */,
 				40343B1D2B7E3C8400C90C1C /* UserProfileView.swift in Sources */,
@@ -400,6 +407,7 @@
 				40343B252B7E3EDA00C90C1C /* SignUpDetails.swift in Sources */,
 				4030036C2B7E534E0099229C /* NetworkManager.swift in Sources */,
 				403003672B7E52B80099229C /* LoginRequest.swift in Sources */,
+				404E975A2B82EB68007738DB /* UserProfileView2.swift in Sources */,
 				403003792B7E65240099229C /* AuthenticationServiceProtocol.swift in Sources */,
 				40343AEB2B7E3A5F00C90C1C /* AcebookApp.swift in Sources */,
 				404E974D2B818D03007738DB /* PostCardView.swift in Sources */,
