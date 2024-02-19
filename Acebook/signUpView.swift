@@ -12,6 +12,7 @@ struct SignUpView: View {
     @State private var lastName: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var showingLogin = false
     
     var body: some View {
         NavigationView {
@@ -28,6 +29,7 @@ struct SignUpView: View {
                 
                 NavigationLink(destination: NameEntryView(firstName: $firstName, lastName: $lastName)) {
                     Text("Get started")
+                    
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .padding()
                         .foregroundColor(.white)
@@ -35,10 +37,14 @@ struct SignUpView: View {
                         .cornerRadius(10)
                 }
                 
-                Button("I already have an account") {
-                    // Action to show login screen
-                }
-                .padding()
+                Button(action: {
+                    // This action is optional if you don't need to perform any additional actions when the button is tapped
+                }) {
+                    NavigationLink(destination: LoginView()) {
+                        Text("I already have an account")
+                    }
+                    .padding()
+                }                
                 
                 Spacer()
                 
@@ -87,7 +93,7 @@ struct NameEntryView: View {
             Spacer()
         }
         .navigationTitle("Sign Up")
-        .navigationBarBackButtonHidden(false)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
@@ -119,7 +125,7 @@ struct EmailEntryView: View {
             Spacer()
         }
         .navigationTitle("Email")
-        .navigationBarBackButtonHidden(false)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
@@ -149,7 +155,7 @@ struct PasswordEntryView: View {
             Spacer()
         }
         .navigationTitle("Password")
-        .navigationBarBackButtonHidden(false)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

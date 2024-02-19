@@ -1,9 +1,4 @@
-//
-//  PostCardView.swift
-//  Acebook
-//
-//  Created by Fawaz Tarar on 18/02/2024.
-//
+
 
 import Foundation
 //

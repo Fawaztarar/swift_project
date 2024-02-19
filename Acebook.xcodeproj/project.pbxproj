@@ -10,9 +10,6 @@
 		403003672B7E52B80099229C /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403003662B7E52B80099229C /* LoginRequest.swift */; };
 		4030036C2B7E534E0099229C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030036B2B7E534E0099229C /* NetworkManager.swift */; };
 		403003732B7E64690099229C /* WelcomePageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403003722B7E64690099229C /* WelcomePageUITests.swift */; };
-		403003752B7E64BE0099229C /* WelcomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403003742B7E64BE0099229C /* WelcomePageView.swift */; };
-		403003792B7E65240099229C /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403003782B7E65240099229C /* AuthenticationServiceProtocol.swift */; };
-		4030037C2B7E65890099229C /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030037B2B7E65890099229C /* AuthenticationService.swift */; };
 		4030037E2B7F9DFC0099229C /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030037D2B7F9DFC0099229C /* DateUtils.swift */; };
 		403003812B7FA01D0099229C /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403003802B7FA01D0099229C /* CommentView.swift */; };
 		403003852B7FA3980099229C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403003842B7FA3980099229C /* Comment.swift */; };
@@ -38,6 +35,13 @@
 		404E97502B81C240007738DB /* CommentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E974F2B81C240007738DB /* CommentRow.swift */; };
 		404E97522B82BFBD007738DB /* FacebookTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E97512B82BFBD007738DB /* FacebookTopBarView.swift */; };
 		404E97542B82C1A0007738DB /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E97532B82C1A0007738DB /* CreatePostView.swift */; };
+		404E97562B82E163007738DB /* FacebookPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E97552B82E163007738DB /* FacebookPostView.swift */; };
+		404E975A2B82EB68007738DB /* UserProfileView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E97592B82EB68007738DB /* UserProfileView2.swift */; };
+		405D84012B83FCFE00E7E359 /* TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D84002B83FCFE00E7E359 /* TokenStorage.swift */; };
+		405D84032B83FEC400E7E359 /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D84022B83FEC300E7E359 /* AuthenticationServiceProtocol.swift */; };
+		405D84052B83FEE300E7E359 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D84042B83FEE300E7E359 /* AuthenticationService.swift */; };
+		405D84072B840D3100E7E359 /* StatusUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D84062B840D3100E7E359 /* StatusUpdateView.swift */; };
+		405D84092B840E3F00E7E359 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D84082B840E3F00E7E359 /* TopBarView.swift */; };
 		40CE3B742B814FB3005CBAF0 /* CommentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CE3B732B814FB3005CBAF0 /* CommentManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,9 +66,6 @@
 		403003662B7E52B80099229C /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		4030036B2B7E534E0099229C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		403003722B7E64690099229C /* WelcomePageUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomePageUITests.swift; path = "../../../swiftui-engineering-project-main/MobileAcebookUITests/WelcomePageUITests.swift"; sourceTree = "<group>"; };
-		403003742B7E64BE0099229C /* WelcomePageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomePageView.swift; path = "../../../../swiftui-engineering-project-main/MobileAcebook/WelcomePageView.swift"; sourceTree = "<group>"; };
-		403003782B7E65240099229C /* AuthenticationServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationServiceProtocol.swift; path = "../../../../swiftui-engineering-project-main/MobileAcebook/Protocols/AuthenticationServiceProtocol.swift"; sourceTree = "<group>"; };
-		4030037B2B7E65890099229C /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationService.swift; path = "../../../../swiftui-engineering-project-main/MobileAcebook/Services/AuthenticationService.swift"; sourceTree = "<group>"; };
 		4030037D2B7F9DFC0099229C /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		403003802B7FA01D0099229C /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		403003842B7FA3980099229C /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -93,6 +94,13 @@
 		404E974F2B81C240007738DB /* CommentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRow.swift; sourceTree = "<group>"; };
 		404E97512B82BFBD007738DB /* FacebookTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookTopBarView.swift; sourceTree = "<group>"; };
 		404E97532B82C1A0007738DB /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
+		404E97552B82E163007738DB /* FacebookPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookPostView.swift; sourceTree = "<group>"; };
+		404E97592B82EB68007738DB /* UserProfileView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView2.swift; sourceTree = "<group>"; };
+		405D84002B83FCFE00E7E359 /* TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
+		405D84022B83FEC300E7E359 /* AuthenticationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceProtocol.swift; sourceTree = "<group>"; };
+		405D84042B83FEE300E7E359 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		405D84062B840D3100E7E359 /* StatusUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusUpdateView.swift; sourceTree = "<group>"; };
+		405D84082B840E3F00E7E359 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		40CE3B732B814FB3005CBAF0 /* CommentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,8 +148,9 @@
 		4030036F2B7E5CB00099229C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				4030037B2B7E65890099229C /* AuthenticationService.swift */,
 				4030037D2B7F9DFC0099229C /* DateUtils.swift */,
+				405D84002B83FCFE00E7E359 /* TokenStorage.swift */,
+				405D84042B83FEE300E7E359 /* AuthenticationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -156,7 +165,7 @@
 		403003712B7E5CF00099229C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				403003782B7E65240099229C /* AuthenticationServiceProtocol.swift */,
+				405D84022B83FEC300E7E359 /* AuthenticationServiceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -166,7 +175,11 @@
 			children = (
 				40343B182B7E3C4A00C90C1C /* PostFeedView.swift */,
 				404E97532B82C1A0007738DB /* CreatePostView.swift */,
+				405D84062B840D3100E7E359 /* StatusUpdateView.swift */,
+				404E97592B82EB68007738DB /* UserProfileView2.swift */,
 				404E97512B82BFBD007738DB /* FacebookTopBarView.swift */,
+				405D84082B840E3F00E7E359 /* TopBarView.swift */,
+				404E97552B82E163007738DB /* FacebookPostView.swift */,
 				404E974C2B818D03007738DB /* PostCardView.swift */,
 				404E974F2B81C240007738DB /* CommentRow.swift */,
 				4030038A2B81101B0099229C /* PostViewModel .swift */,
@@ -221,7 +234,6 @@
 		40343AF02B7E3A6100C90C1C /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				403003742B7E64BE0099229C /* WelcomePageView.swift */,
 				40343AF12B7E3A6100C90C1C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -391,32 +403,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				405D84032B83FEC400E7E359 /* AuthenticationServiceProtocol.swift in Sources */,
 				403003812B7FA01D0099229C /* CommentView.swift in Sources */,
+				405D84012B83FCFE00E7E359 /* TokenStorage.swift in Sources */,
+				404E97562B82E163007738DB /* FacebookPostView.swift in Sources */,
 				4030038B2B81101B0099229C /* PostViewModel .swift in Sources */,
 				404E97542B82C1A0007738DB /* CreatePostView.swift in Sources */,
 				40343B1D2B7E3C8400C90C1C /* UserProfileView.swift in Sources */,
 				40343AED2B7E3A5F00C90C1C /* ContentView.swift in Sources */,
 				404E97522B82BFBD007738DB /* FacebookTopBarView.swift in Sources */,
 				40343B252B7E3EDA00C90C1C /* SignUpDetails.swift in Sources */,
+				405D84092B840E3F00E7E359 /* TopBarView.swift in Sources */,
 				4030036C2B7E534E0099229C /* NetworkManager.swift in Sources */,
 				403003672B7E52B80099229C /* LoginRequest.swift in Sources */,
-				403003792B7E65240099229C /* AuthenticationServiceProtocol.swift in Sources */,
+				404E975A2B82EB68007738DB /* UserProfileView2.swift in Sources */,
 				40343AEB2B7E3A5F00C90C1C /* AcebookApp.swift in Sources */,
 				404E974D2B818D03007738DB /* PostCardView.swift in Sources */,
 				40343B192B7E3C4A00C90C1C /* PostFeedView.swift in Sources */,
 				40343B212B7E3E7E00C90C1C /* User.swift in Sources */,
+				405D84072B840D3100E7E359 /* StatusUpdateView.swift in Sources */,
 				40343B1B2B7E3C6900C90C1C /* ProfileSettingsView.swift in Sources */,
 				40343B232B7E3E8E00C90C1C /* Post.swift in Sources */,
 				404E97502B81C240007738DB /* CommentRow.swift in Sources */,
 				40343B172B7E3C2600C90C1C /* LoginView.swift in Sources */,
-				4030037C2B7E65890099229C /* AuthenticationService.swift in Sources */,
 				403003852B7FA3980099229C /* Comment.swift in Sources */,
 				40CE3B742B814FB3005CBAF0 /* CommentManager.swift in Sources */,
 				4030037E2B7F9DFC0099229C /* DateUtils.swift in Sources */,
 				40343B272B7E3EF900C90C1C /* LoginCredentials.swift in Sources */,
 				403003872B7FA7EC0099229C /* PostDetailView.swift in Sources */,
 				40343B152B7E3BD200C90C1C /* signUpView.swift in Sources */,
-				403003752B7E64BE0099229C /* WelcomePageView.swift in Sources */,
+				405D84052B83FEE300E7E359 /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
