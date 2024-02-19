@@ -56,9 +56,10 @@ struct PostDetailView: View {
                 Text("Comments")
                     .font(.headline)
                     .padding(.horizontal)
-                ForEach(post.comments) { comment in
-                    CommentRow(comment: comment)
-                }
+               
+                
+                
+                
                 HStack {
                     TextField("Add a comment...", text: $newCommentText)
                         .textFieldStyle(RoundedBorderTextFieldStyle())

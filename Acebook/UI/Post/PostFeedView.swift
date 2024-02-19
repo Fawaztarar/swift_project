@@ -18,6 +18,7 @@ struct PostFeedView: View {
         Post.example6
     ]
     @State private var useStaticData = true
+    @State private var newPostText: String = ""
 
     var body: some View {
         NavigationView {
@@ -50,8 +51,27 @@ struct PostFeedView: View {
                     viewModel.loadPosts()
                 }
             }
+            .padding()
+            .overlay(
+                VStack {
+                    TextField("What's on your mind?", text: $newPostText) // Step 2: Add text field for new post
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
+                        .padding(.horizontal)
+                    
+                    Spacer()
+                    
+                    
+                }
+                    
+            )
         }
     }
+                            
+                            
 
     func addNewPost() {
         if useStaticData {

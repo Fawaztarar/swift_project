@@ -36,6 +36,8 @@
 		40343B272B7E3EF900C90C1C /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40343B262B7E3EF900C90C1C /* LoginCredentials.swift */; };
 		404E974D2B818D03007738DB /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E974C2B818D03007738DB /* PostCardView.swift */; };
 		404E97502B81C240007738DB /* CommentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E974F2B81C240007738DB /* CommentRow.swift */; };
+		404E97522B82BFBD007738DB /* FacebookTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E97512B82BFBD007738DB /* FacebookTopBarView.swift */; };
+		404E97542B82C1A0007738DB /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E97532B82C1A0007738DB /* CreatePostView.swift */; };
 		40CE3B742B814FB3005CBAF0 /* CommentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CE3B732B814FB3005CBAF0 /* CommentManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,8 @@
 		40343B262B7E3EF900C90C1C /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 		404E974C2B818D03007738DB /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
 		404E974F2B81C240007738DB /* CommentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRow.swift; sourceTree = "<group>"; };
+		404E97512B82BFBD007738DB /* FacebookTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookTopBarView.swift; sourceTree = "<group>"; };
+		404E97532B82C1A0007738DB /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
 		40CE3B732B814FB3005CBAF0 /* CommentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				40343B182B7E3C4A00C90C1C /* PostFeedView.swift */,
+				404E97532B82C1A0007738DB /* CreatePostView.swift */,
+				404E97512B82BFBD007738DB /* FacebookTopBarView.swift */,
 				404E974C2B818D03007738DB /* PostCardView.swift */,
 				404E974F2B81C240007738DB /* CommentRow.swift */,
 				4030038A2B81101B0099229C /* PostViewModel .swift */,
@@ -387,8 +393,10 @@
 			files = (
 				403003812B7FA01D0099229C /* CommentView.swift in Sources */,
 				4030038B2B81101B0099229C /* PostViewModel .swift in Sources */,
+				404E97542B82C1A0007738DB /* CreatePostView.swift in Sources */,
 				40343B1D2B7E3C8400C90C1C /* UserProfileView.swift in Sources */,
 				40343AED2B7E3A5F00C90C1C /* ContentView.swift in Sources */,
+				404E97522B82BFBD007738DB /* FacebookTopBarView.swift in Sources */,
 				40343B252B7E3EDA00C90C1C /* SignUpDetails.swift in Sources */,
 				4030036C2B7E534E0099229C /* NetworkManager.swift in Sources */,
 				403003672B7E52B80099229C /* LoginRequest.swift in Sources */,
