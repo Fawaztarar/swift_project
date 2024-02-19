@@ -126,7 +126,7 @@ struct LoginView: View {
         VStack {
             Spacer()
             
-            Image("xlogo") // Your Facebook logo image asset
+         
             Image("xlogo") // Your Facebook logo image asset
                 .resizable()
                 .aspectRatio(contentMode: .fit)
