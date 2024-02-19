@@ -127,6 +127,7 @@ struct LoginView: View {
             Spacer()
             
             Image("xlogo") // Your Facebook logo image asset
+            Image("xlogo") // Your Facebook logo image asset
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 60)
@@ -170,6 +171,7 @@ struct LoginView: View {
                     .background(Color.blue.opacity(0.2))
                     .cornerRadius(10)
                     .padding(.horizontal, 50)
+                
             }
             
             Spacer()

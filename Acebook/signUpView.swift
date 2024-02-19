@@ -13,6 +13,7 @@ struct SignUpView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var showingLogin = false
+    @State private var showingLogin = false
     
     var body: some View {
         NavigationView {
