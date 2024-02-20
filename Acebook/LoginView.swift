@@ -164,7 +164,7 @@ struct LoginView: View {
             }
             .padding()
             
-            NavigationLink(destination: SignUpView()) {
+            NavigationLink(destination: UserProfileView()) {
                 Text("Create new account")
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .padding()
