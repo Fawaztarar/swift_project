@@ -13,9 +13,7 @@ struct PostFeedView: View {
         Post.example1,
         Post.example2,
         Post.example3,
-        Post.example4,
-        Post.example5,
-        Post.example6
+     
     ]
     @State private var useStaticData = true
     @State private var newPostText: String = ""
