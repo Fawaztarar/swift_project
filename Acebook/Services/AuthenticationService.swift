@@ -89,3 +89,24 @@ class AuthenticationService: AuthenticationServiceProtocol {
         }.resume()
     }
 }
+
+// MARK: - Token Parsing
+   
+   private func parseToken(from data: Data) -> String? {
+       guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+             let token = json["token"] as? String else {
+           return nil
+       }
+       return token
+   }
+   
+   // MARK: - Message Parsing
+   
+   private func parseMessage(from data: Data) -> String? {
+       guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+             let message = json["message"] as? String else {
+           return nil
+       }
+       return message
+   }
+

@@ -2,8 +2,10 @@
 //  signUpView.swift
 //  Acebook
 //
-//  Created by Fawaz Tarar on 15/02/2024.
+//  Created by Fawaz Tarar on 19/02/2024.
 //
+
+
 
 import SwiftUI
 
@@ -44,7 +46,7 @@ struct SignUpView: View {
                         Text("I already have an account")
                     }
                     .padding()
-                }                
+                }
                 
                 Spacer()
                 
