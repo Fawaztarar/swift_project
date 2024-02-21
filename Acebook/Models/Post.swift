@@ -31,9 +31,9 @@ struct Post: Identifiable, Equatable {
 
     // Example Posts for Preview
     static let example1 = Post(id: UUID(), username: "user1", content: "Hello World!", createdAt: Date(), profilePicture: "profile3.png")
+    
     static let example2 = Post(id: UUID(), username: "user2", content: "This is a post.", createdAt: Date().addingTimeInterval(-86400), profilePicture: "profile2.png") // 1 day ago
+    
     static let example3 = Post(id: UUID(), username: "adventure_123", content: "Just climbed the highest mountain!", createdAt: Date().addingTimeInterval(-2_592_000), profilePicture: "profile2.png") // 1 month ago
-    static let example4 = Post(id: UUID(), username: "booklover", content: "Finished reading a great novel today.", createdAt: Date().addingTimeInterval(-604_800), profilePicture: "profile4.png") // 1 week ago
-    static let example5 = Post(id: UUID(), username: "tech_guru", content: "Exploring SwiftUI. It's awesome!", createdAt: Date().addingTimeInterval(-1_209_600), profilePicture: "profile5") // 2 weeks ago
-    static let example6 = Post(id: UUID(), username: "nature_photographer", content: "Captured a beautiful sunset.", createdAt: Date().addingTimeInterval(-3_600), profilePicture: "profile6") // 1 hour ago
+    
 }

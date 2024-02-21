@@ -15,7 +15,7 @@ struct FacebookPostView: View {
         VStack(spacing: 0) {  // Set spacing to 0 to remove gaps
             // Profile and post header
             HStack {
-                Image("profile3.png") // Replace with your profile picture asset
+                Image("profile4.png") // Replace with your profile picture asset
                     .resizable()
                     .scaledToFill()
                     .frame(width: 50, height: 50)
@@ -45,7 +45,7 @@ struct FacebookPostView: View {
                 .padding([.leading, .trailing])
 
             // Post image
-            Image("post") // Replace with your post image asset
+            Image("Image") // Replace with your post image asset
                 .resizable()
                 .scaledToFit()
 
